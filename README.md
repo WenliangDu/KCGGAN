@@ -1,5 +1,8 @@
 # KCGGAN
 Source codes of "K-Means Clustering Guided Generative Adversarial Networks for Automatic SAR-Optical Image Matching"
 
+The data sets of KCG-GAN is uploading to the google drive.
+
+
 # Acknowledgments
 This code borrows heavily from [pix2pixHD](https://github.com/WenliangDu/pix2pixHD) and [pytorch-CycleGAN-and-pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
