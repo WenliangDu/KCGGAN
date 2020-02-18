@@ -26,9 +26,23 @@ Source codes of "K-Means Clustering Guided Generative Adversarial Networks for A
 - Test data set: [SEN12Test](https://drive.google.com/open?id=1-bD4S3f7ugwBQkvJAbyHf9p6_-sVgElB).
 
 ### Training
-- Train a full KCG-GAN model:
+- The KCG-GAN has four main losses: GAN, feautre matching, L1 and segmentation
+
+- Train a full version of KCG-GAN model:
 ```
 python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --lambda_L1 50
+```
+- Train a KCG-GAN model without segmentation:
+```
+python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --lambda_L1 50 --no_seg_in --no_segmentation
+```
+- Train a KCG-GAN model without L1:
+```
+python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --no_L1_loss
+```
+- Train a KCG-GAN model without feature matching:
+```
+python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --no_ganFeat_loss
 ```
 
 ## Acknowledgments
