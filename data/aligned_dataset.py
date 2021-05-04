@@ -71,7 +71,7 @@ class AlignedDataset(BaseDataset):
         if self.opt.isTrain or self.opt.use_encoded_image:
             B_path = self.B_paths[index]   
             B = Image.open(B_path).convert('RGB')
-            transform_B = get_transform(self.opt, params, grayscale=(self.opt.input_nc == 1))
+            transform_B = get_transform(self.opt, params, grayscale=(self.opt.output_nc == 1))
             B_tensor = transform_B(B)
 
         ### if using instance maps        
