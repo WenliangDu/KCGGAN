@@ -30,19 +30,19 @@ Source codes of "K-Means Clustering Guided Generative Adversarial Networks for A
 
 - Train a full version of KCG-GAN model:
 ```
-python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --lambda_L1 50
+python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --lambda_L1 50 --no_vgg_loss
 ```
 - Train a KCG-GAN model without segmentation:
 ```
-python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --lambda_L1 50 --no_seg_in --no_segmentation
+python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --lambda_L1 50 --no_seg_in --no_segmentation --no_vgg_loss
 ```
 - Train a KCG-GAN model without L1:
 ```
-python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --no_L1_loss
+python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --no_L1_loss --no_vgg_loss
 ```
 - Train a KCG-GAN model without feature matching:
 ```
-python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --no_ganFeat_loss
+python train.py --name Gray1cFeat1DSegL1 --dataroot ./datasets/SEN12SpringFeild --label_nc 0 --no_instance --input_nc 1 --output_nc 1 --loadSize 256 --num 1 --no_ganFeat_loss --no_vgg_loss
 ```
 
 ## Acknowledgments
